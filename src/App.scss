@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Kite One", sans-serif; 
+}
+
+p {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 6.5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+    letter-spacing: -2px;
+}
+
+i {
+    cursor: pointer;
+    transition: all .4s ease;
+
+    &:hover {
+        opacity: .5;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, .5);
+    color: rgba(0, 0, 0, .6);
+    font-family: 'Kite One';
+
+    &::placeholder {
+        color: rgba(0, 0, 0, .5);
+    }
+    &::-moz-placeholder {
+        color: rgba(0, 0, 0, .5);
+    }
+    &::-webkit-placeholder {
+        color: rgba(0, 0, 0, .5);
+    }
+}
+
+button {
+    padding: 3px 15px;
+    font-family: 'Kite One', serif;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, .8);
+}
+
+.container {
+    padding: 20px 80px;
+    width: 100vw;
+    height: 100svh;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: cover;
+    position: relative;
+    color: #FFD7D7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    transition: all .5s ease;
+    overflow: hidden;
+    animation: expose .5s ease forwards;
+    
+    @keyframes expose {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .cover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .3);
+        z-index: 2;
+    }
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+}
+
+.animated-section {
+    z-index: 10;
+}
+
+.middle-section {
+    margin-top: auto;
+}
+
+.bottom-section {
+    width: 100%;
+    margin-top: auto;
+
+}
+
+// TODAY'S DATE WITH MUSIC PLAYER
+.date-music-play {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .full-date {
+        width: fit-content;
+        text-align: center;
+    }
+
+    .music-player {
+        display: flex;
+        align-items: center;
+        gap: 1.5em;
+        margin-top: 3em;
+
+        .current-play-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover; 
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border: 1.5px solid white; 
+            }
+        }
+
+        .current-play-title-buttons-radio {
+            .current-play-title-buttons {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1.5em;
+
+                .current-play-title {
+
+                    p:first-child {
+                        margin-bottom: -5px;
+                    }
+                    p:last-child {
+                        font-size: 15px;
+                    }
+                }
+
+                .current-play-buttons {
+                    display: flex;
+                    gap: 5px;
+                }
+            }
+
+            .current-play-radio {
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+                 
+                input {
+                    width: 100%;
+                }
+            }
+
+        }
+
+
+    }
+}
+
+// WEATHER FORECAST WITH TIME AND WELCOME SIGN
+.weather-time-welcome {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .weather-time {
+        .weather-forecast {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .weather-location-desc {
+            p:last-child {
+                font-size: 14px;
+                margin-top: -3px;
+            }
+        }
+
+        .weather-degrees {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            
+            h4 {
+                font-size: 2.4rem;
+                margin-right: 5px;
+            }
+        }
+        
+        i {
+            &:hover {
+                opacity: 1;
+                cursor: default;
+            }
+        }
+
+        #animated-colon {
+            animation: flash .9s linear infinite alternate;
+            margin: 0 15px;
+        }
+
+        @keyframes flash {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    }
+
+    .welcome {
+        h3 {
+            margin-top: -5px;
+            font-size: 2.2rem;
+        }
+    }
+}
+
+
+
+
