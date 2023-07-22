@@ -4,19 +4,19 @@ import Search from '../SearchSection/Search'
 import Favorites from '../FavoritesSection/Favorites'
 import Settings from '../SettingsSection/Settings'
 
-const AnimatedContainer = (prop) => {
+const AnimatedContainer = ({setBackground, background, setIsClosed, isClosed, button, setTextColor, textColor}) => {
 
     function closedContainer() {
-        prop.setIsClosed(true)
+        setIsClosed(true)
     }
 
     const slide = () => {
-        if (prop.button === 'search') {
+        if (button === 'search') {
             return (<Search/>)
-        } else if (prop.button === 'favorite') {
+        } else if (button === 'favorite') {
             return (<Favorites/>)
-        } else if (prop.button === 'settings') {
-            return (<Settings/>)
+        } else if (button === 'settings') {
+            return (<Settings setBackground={setBackground} background={background} setTextColor={setTextColor} textColor={textColor}/>)
         } 
     }
 
@@ -31,7 +31,7 @@ const AnimatedContainer = (prop) => {
 
 
   return (
-    <div className={prop.isClosed ? 'animated-container closed' : 'animated-container open'}>
+    <div className={isClosed ? 'animated-container closed' : 'animated-container open'}>
         <div className='animated-content'>
             <div className='close-btn' onClick={closedContainer}>
                 <i className='bx bx-x bx-sm'></i>

@@ -200,13 +200,19 @@ main {
                 }
             }
 
-            .current-play-radio {
-                display: flex;
-                justify-content: center;
+            .current-play-range {
                 margin-top: 10px;
-                 
-                input {
-                    width: 100%;
+                height: 3.5px;
+                width: 100%;
+                background-color: rgba(255, 255, 255, .3);
+                border-radius: 10px;
+                cursor: pointer;
+
+                .seek-bar {
+                    height: 100%;
+                    width: 50%;
+                    background-color: rgba(255, 255, 255, .4);
+                    border-radius: 10px;
                 }
             }
 

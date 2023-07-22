@@ -6,10 +6,13 @@ import Navbar from './component/Navbar/Navbar';
 import Loader from './component/Loader/Loader';
 import fullDate from './utils/getFullDate'
 import audioData from './utils/audioData'
+import lofiImages from './imageData';
 
 function App() {
   const [day, setDay] = useState()
   const [location, setLocation] = useState()
+  const [background, setBackground] = useState(lofi1)
+  const [textColor, setTextColor] = useState(lofiImages[0].textColor)
 
   useEffect(function() {
     setInterval(function() {
@@ -30,9 +33,9 @@ function App() {
   // if (!weather) return <Loader/>
 
   return (
-    <div className="container" style={{ backgroundImage: 'url('+ lofi1 + ')'}}>
+    <div className="container" style={{ backgroundImage: 'url('+ background + ')', color: textColor}}>
       <div className='cover'></div>
-      <Navbar/>
+      <Navbar setBackground={setBackground} background={background} setTextColor={setTextColor} textColor={textColor}/>
       <main>
         <section className='middle-section'>
           <div className='date-music-play'>
@@ -62,8 +65,8 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className='current-play-radio'>
-                  <input type="range" min="1" max="100" className="seek_slider"/>
+                <div className='current-play-range'>
+                  <div className='seek-bar'></div>
                 </div>
               </div>
             </div>
