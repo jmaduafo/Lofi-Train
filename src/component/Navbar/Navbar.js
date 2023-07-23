@@ -3,7 +3,7 @@ import '../Navbar/navbar.scss'
 import AnimatedContainer from '../AnimatedContainer/AnimatedContainer'
 
 
-const Navbar = ({setBackground, background, setTextColor, textColor}) => {
+const Navbar = ({setBackground, background, setTextColor, textColor, setIsFavorite, isFavorite}) => {
   const [button, setButton] = useState('')
 
   const [isClosed, setIsClosed] = useState(true)
@@ -43,7 +43,7 @@ const Navbar = ({setBackground, background, setTextColor, textColor}) => {
     </header>
     <section className='animated-section' style={{}}>
       {/* {button === 'settings' ? <AnimatedSettings /> : <AnimatedContainer button={button}/> } */}
-      <AnimatedContainer setBackground={setBackground} background={background} setIsClosed={setIsClosed} isClosed={isClosed} button={button} setTextColor={setTextColor} textColor={textColor}/>
+      <AnimatedContainer setBackground={setBackground} background={background} setIsClosed={setIsClosed} isClosed={isClosed} button={button} setTextColor={setTextColor} textColor={textColor} setIsFavorite={setIsFavorite} isFavorite={isFavorite}/>
       
     </section>
     </> 

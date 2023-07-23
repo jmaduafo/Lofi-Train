@@ -98,23 +98,23 @@ const Settings = ({setBackground, background, setTextColor, textColor}) => {
           <p>Set a Background</p>
           <div className='background-display'>
               <div className='display'>
-                <img data-id='1' src={require('../../assets/images/lofi-settings1.jpg')} alt='' onClick={backgroundSetting} />
+                <img data-id='1' src={require('../../assets/images/lofi-settings.jpg')} alt='' onClick={backgroundSetting} />
               </div>
               <div className='display'>
-                <img data-id='2' src={require('../../assets/images/lofi-settings2.gif')} alt='' onClick={backgroundSetting}/>
+                <img data-id='2' src={require('../../assets/audioImages/lofi-audio-pic12.jpg')} alt='' onClick={backgroundSetting}/>
               </div>
               <div className='display'>
-                <img data-id='3' src={require('../../assets/images/lofi-settings3.gif')} alt='' onClick={backgroundSetting}/>
+                <img data-id='3' src={require('../../assets/images/lofi-settings2.gif')} alt='' onClick={backgroundSetting}/>
               </div>
               <div className='display'>
-                <img data-id='4' src={require('../../assets/images/lofi-settings6.gif')} alt='' onClick={backgroundSetting}/>
+                <img data-id='4' src={require('../../assets/images/lofi-settings3.gif')} alt='' onClick={backgroundSetting}/>
               </div>
               <div className='display'>
-                <img data-id='5' src={require('../../assets/images/lofi1.jpg')} alt='' onClick={backgroundSetting}/>
-              </div>
-              <div className='display'>
-                <img data-id='6' src={require('../../assets/images/lofi-settings7.gif')} alt='' onClick={backgroundSetting}/>
+                <img data-id='5' src={require('../../assets/images/lofi-settings11.gif')} alt='' onClick={backgroundSetting}/>
               </div>             
+              <div className='display'>
+                <img data-id='6' src={require('../../assets/images/lofi-settings8.gif')} alt='' onClick={backgroundSetting}/>
+              </div>                       
           </div>
       </div>
     </div>

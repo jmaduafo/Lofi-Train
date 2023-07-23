@@ -27,7 +27,15 @@
         justify-content: space-between;
         align-items: center;
         padding: 10px;
-        border-bottom: 1px solid rgba(255, 255, 255, .2);     
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
+        border-radius: 10px;
+        gap: 15px;  
+        transition: all .4s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, .1);
+        }
 
 
         .list-image-favorite {
@@ -39,16 +47,24 @@
                 width: 50px;
                 height: 50px;
                 background-color: aliceblue;
+                object-fit: cover;
+                border-radius: 5px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                }
             } 
         }
 
         .list-title-name {
             text-align: right;
             p:first-child {
-                font-size: 18px;
+                font-size: 14px;
             }
             p:last-child {
-                font-size: 15px;
+                font-size: 12px;
             }
         }
     }

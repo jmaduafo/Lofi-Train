@@ -4,7 +4,7 @@ import Search from '../SearchSection/Search'
 import Favorites from '../FavoritesSection/Favorites'
 import Settings from '../SettingsSection/Settings'
 
-const AnimatedContainer = ({setBackground, background, setIsClosed, isClosed, button, setTextColor, textColor}) => {
+const AnimatedContainer = ({setBackground, background, setIsClosed, isClosed, button, setTextColor, textColor, setIsFavorite, isFavorite}) => {
 
     function closedContainer() {
         setIsClosed(true)
@@ -14,7 +14,7 @@ const AnimatedContainer = ({setBackground, background, setIsClosed, isClosed, bu
         if (button === 'search') {
             return (<Search/>)
         } else if (button === 'favorite') {
-            return (<Favorites/>)
+            return (<Favorites setIsFavorite={setIsFavorite} isFavorite={isFavorite}/>)
         } else if (button === 'settings') {
             return (<Settings setBackground={setBackground} background={background} setTextColor={setTextColor} textColor={textColor}/>)
         } 
@@ -33,8 +33,8 @@ const AnimatedContainer = ({setBackground, background, setIsClosed, isClosed, bu
   return (
     <div className={isClosed ? 'animated-container closed' : 'animated-container open'}>
         <div className='animated-content'>
-            <div className='close-btn' onClick={closedContainer}>
-                <i className='bx bx-x bx-sm'></i>
+            <div className='close-btn'>
+                <i className='bx bx-x bx-sm' onClick={closedContainer}></i>
             </div>
             {slide()}
         </div>

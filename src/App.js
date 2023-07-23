@@ -1,18 +1,19 @@
 import './App.scss';
 import { useEffect, useState } from 'react';
-import lofi1 from './assets/images/lofi-settings1.jpg'
-import lofiCover from './assets/images/lofi1.jpg'
+import lofiCover from './assets/images/lofi-settings.jpg'
 import Navbar from './component/Navbar/Navbar';
 import Loader from './component/Loader/Loader';
 import fullDate from './utils/getFullDate'
 import audioData from './utils/audioData'
 import lofiImages from './imageData';
+import audioFiles from './utils/audioData';
 
 function App() {
   const [day, setDay] = useState()
   const [location, setLocation] = useState()
-  const [background, setBackground] = useState(lofi1)
+  const [background, setBackground] = useState(lofiImages[0].image)
   const [textColor, setTextColor] = useState(lofiImages[0].textColor)
+  const [isFavorite, setIsFavorite] = useState()
 
   useEffect(function() {
     setInterval(function() {
@@ -24,8 +25,6 @@ function App() {
         }
       }))
     }, 1000)
-
-    console.log(audioData)
       
   }, [])
 
@@ -35,7 +34,7 @@ function App() {
   return (
     <div className="container" style={{ backgroundImage: 'url('+ background + ')', color: textColor}}>
       <div className='cover'></div>
-      <Navbar setBackground={setBackground} background={background} setTextColor={setTextColor} textColor={textColor}/>
+      <Navbar setBackground={setBackground} background={background} setTextColor={setTextColor} textColor={textColor} setIsFavorite={setIsFavorite} isFavorite={isFavorite}/>
       <main>
         <section className='middle-section'>
           <div className='date-music-play'>
@@ -65,8 +64,8 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className='current-play-range'>
-                  <div className='seek-bar'></div>
+                <div className='current-play-range' style={{backgroundColor: textColor + '50'}}>
+                  <div className='seek-bar' style={{ backgroundColor: textColor + '90'}}></div>
                 </div>
               </div>
             </div>
