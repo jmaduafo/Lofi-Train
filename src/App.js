@@ -4,7 +4,6 @@ import lofiCover from './assets/images/lofi-settings.jpg'
 import Navbar from './component/Navbar/Navbar';
 import Loader from './component/Loader/Loader';
 import fullDate from './utils/getFullDate'
-import audioData from './utils/audioData'
 import lofiImages from './imageData';
 import audioFiles from './utils/audioData';
 
@@ -25,11 +24,18 @@ function App() {
         }
       }))
     }, 1000)
-      
   }, [])
+
+  useEffect(function() {
+    setIsFavorite(audioFiles.filter(audio => {
+      return audio.isFavorite === true
+    }))
+  }, [isFavorite])
 
   if (!day) return <Loader/>
   // if (!weather) return <Loader/>
+
+  
 
   return (
     <div className="container" style={{ backgroundImage: 'url('+ background + ')', color: textColor}}>
