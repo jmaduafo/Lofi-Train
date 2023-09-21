@@ -13,6 +13,7 @@ function App() {
   const [background, setBackground] = useState(lofiImages[0].image)
   const [textColor, setTextColor] = useState(lofiImages[0].textColor)
   const [isFavorite, setIsFavorite] = useState()
+  const [selectedSong, setSelectedSong] = useState(audioFiles[0])
 
   useEffect(function() {
     setInterval(function() {
@@ -30,7 +31,7 @@ function App() {
     setIsFavorite(audioFiles.filter(audio => {
       return audio.isFavorite === true
     }))
-  }, [isFavorite])
+  }, [day])
 
   if (!day) return <Loader/>
   // if (!weather) return <Loader/>
@@ -40,7 +41,7 @@ function App() {
   return (
     <div className="container" style={{ backgroundImage: 'url('+ background + ')', color: textColor}}>
       <div className='cover'></div>
-      <Navbar setBackground={setBackground} background={background} setTextColor={setTextColor} textColor={textColor} setIsFavorite={setIsFavorite} isFavorite={isFavorite}/>
+      <Navbar setBackground={setBackground} background={background} setTextColor={setTextColor} textColor={textColor} setIsFavorite={setIsFavorite} isFavorite={isFavorite} setSelectedSong={setSelectedSong} selectedSong={selectedSong}/>
       <main>
         <section className='middle-section'>
           <div className='date-music-play'>
@@ -50,13 +51,13 @@ function App() {
             </div>
             <div className='music-player'>
               <div className='current-play-image'>
-                <img src={lofiCover} alt='' />
+                <img src={selectedSong?.image} alt={selectedSong?.title} />
               </div>
               <div className='current-play-title-buttons-radio'>
                 <div className='current-play-title-buttons'>
                   <div className='current-play-title'>
-                    <p>Rest Well</p>
-                    <p>Sean Mayer</p>
+                    <p>{selectedSong?.title}</p>
+                    <p>{selectedSong?.artist}</p>
                   </div>
                   <div className='current-play-buttons'>
                     <div className='rewind'>

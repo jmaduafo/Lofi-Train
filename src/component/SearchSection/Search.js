@@ -3,7 +3,7 @@ import '../SearchSection/search.scss'
 import ListDisplay from '../ListDisplay/ListDisplay'
 import audioFiles from '../../utils/audioData'
 
-const Search = () => {
+const Search = ({setSelectedSong, selectedSong}) => {
   const [audioData, setAudioData] = useState()
   const [search, setSearch] = useState('')
 
@@ -22,7 +22,7 @@ const Search = () => {
   return (
     <div className='search-content'>
       <input type='text' placeholder='Search' onChange={handleSearch}/>
-      <ListDisplay audioData={audioData}/>
+      <ListDisplay audioData={audioData} setSelectedSong={setSelectedSong} selectedSong={selectedSong}/>
     </div>
     
   )

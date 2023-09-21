@@ -163,6 +163,7 @@ main {
         align-items: center;
         gap: 1.5em;
         margin-top: 3em;
+        text-align: left;
 
         .current-play-image {
             width: 80px;
@@ -187,10 +188,11 @@ main {
                 .current-play-title {
 
                     p:first-child {
-                        margin-bottom: -5px;
+                        margin-bottom: 0px;
+                        font-size: 16.5px;
                     }
                     p:last-child {
-                        font-size: 15px;
+                        font-size: 12.5px;
                     }
                 }
 

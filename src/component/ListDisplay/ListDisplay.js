@@ -3,15 +3,16 @@ import '../ListDisplay/listDisplay.scss'
 import audioFiles from '../../utils/audioData'
 
 const ListDisplay = (prop) => {
-    function favoriteClick() {
-        prop.setIsFavorite();
+
+    function selectedSong(e) {
+        prop.setSelectedSong(audioFiles[+e.target.getAttribute('data-id') - 1])
+        console.log(audioFiles[2])
     }
 
   return (
     <div className='list-section'>
     <div className='list-container'>
         {prop.audioData?.length ? prop.audioData?.map(audio => {
-            if (audio !== undefined) {
             return (
                 <div key={audio.id} className='list-content' >
                     <div className='list-image-favorite'>
@@ -20,6 +21,7 @@ const ListDisplay = (prop) => {
                         </div>
                         <div className='list-image'>
                             <img src={audio.image} alt={audio.title}/>
+                            <i className='bx bx-play' onClick={() => {prop.setSelectedSong(audioFiles[+audio.id - 1])}}></i>
                         </div>
                     </div>
                     <div className='list-title-name'>
@@ -28,8 +30,8 @@ const ListDisplay = (prop) => {
                     </div>
                 </div>
             )
-        }
-    }) : <div className='none-added' style={{ textAlign: 'center', padding: '5px 0'}}><p style={{ fontSize: '14px'}}>No favorites added!</p></div>}
+        
+    }) : <div className='none-added' style={{ textAlign: 'center', padding: '5px 0'}}><p style={{ fontSize: '14px'}}>No music displayed!</p></div>}
                
     </div>
     </div>
