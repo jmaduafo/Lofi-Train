@@ -42,6 +42,7 @@ header {
                     }
                 }
             }
+
         }
     }  
 }
@@ -58,6 +59,7 @@ $giant: 1920px;
     header {
         width: 90%;
         justify-content: center;
+        top: 40px;
     
         nav {
             padding: 10px 15px;
@@ -85,6 +87,7 @@ $giant: 1920px;
     header {
         width: 90%;
         justify-content: center;
+        top: 40px;
     
         nav {
             padding: 15px 30px;

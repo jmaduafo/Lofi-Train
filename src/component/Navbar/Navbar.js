@@ -34,9 +34,9 @@ const Navbar = ({setPress, setBackground, background, setTextColor, textColor, s
           </div>
           <div className='separate'></div>
           <div className='social-links'>
-            <i className='bx bxl-github'></i>
-            <i className='bx bxl-instagram'></i>
-            <i className='bx bxl-linkedin-square'></i>
+            <a href='https://github.com/jmaduafo' target='_blank' rel='noreferrer'><i className='bx bxl-github' style={{ color: textColor}}></i></a>
+            <a href='https://www.instagram.com/jazzimanian_devil/' target='_blank' rel='noreferrer' style={{ color: textColor}}><i className='bx bxl-instagram'></i></a>
+            <a href='https://www.linkedin.com/in/jasmine-maduafokwa-48070a180/' target='_blank' rel='noreferrer' style={{ color: textColor}}><i className='bx bxl-linkedin-square'></i></a>
           </div>
         </div>
       </nav>

@@ -63,7 +63,7 @@ $giant: 1920px;
 
 @media screen and (min-width: $xs) and (max-width: $sm) {
     .animated-container {
-        top: 12%;
+        top: 14%;
         right: 5%;
         width: 89%;
         padding: 15px 18px;
@@ -72,10 +72,10 @@ $giant: 1920px;
 }
 @media screen and (min-width: $sm) and (max-width: $md) {
     .animated-container {
-        top: 12%;
+        top: 14%;
         right: 15%;
         width: 68%;
-        padding: 15px 22px;
+        padding: 15px 20px;
     }
 }
 @media screen and (min-width: $md) and (max-width: $lg) {
@@ -83,7 +83,7 @@ $giant: 1920px;
         top: 12%;
         right: 5%;
         width: 41%;
-        padding: 18px 25px;
+        padding: 18px 20px;
     }
 
 }
@@ -92,7 +92,7 @@ $giant: 1920px;
         top: 11%;
         right: 5%;
         width: 33.5%;
-        padding: 20px 28px;
+        padding: 20px 20px;
     }
 }
 
@@ -101,7 +101,7 @@ $giant: 1920px;
         top: 11%;
         right: 5%;
         width: 28.5%;
-        padding: 25px 32px;
+        padding: 22px 23px;
     }
 }
 
