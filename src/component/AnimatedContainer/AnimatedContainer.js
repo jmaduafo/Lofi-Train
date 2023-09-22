@@ -4,7 +4,7 @@ import Search from '../SearchSection/Search'
 import Favorites from '../FavoritesSection/Favorites'
 import Settings from '../SettingsSection/Settings'
 
-const AnimatedContainer = ({setBackground, background, setIsClosed, isClosed, button, setTextColor, textColor, setIsFavorite, isFavorite, setSelectedSong, selectedSong}) => {
+const AnimatedContainer = ({setPress, setBackground, background, setIsClosed, isClosed, button, setTextColor, textColor, setIsFavorite, isFavorite, setSelectedSong, selectedSong}) => {
 
     function closedContainer() {
         setIsClosed(true)
@@ -12,9 +12,9 @@ const AnimatedContainer = ({setBackground, background, setIsClosed, isClosed, bu
 
     const slide = () => {
         if (button === 'search') {
-            return (<Search setSelectedSong={setSelectedSong} selectedSong={selectedSong}/>)
+            return (<Search setPress={setPress} setSelectedSong={setSelectedSong} selectedSong={selectedSong}/>)
         } else if (button === 'favorite') {
-            return (<Favorites setIsFavorite={setIsFavorite} isFavorite={isFavorite} setSelectedSong={setSelectedSong} selectedSong={selectedSong}/>)
+            return (<Favorites setPress={setPress} setIsFavorite={setIsFavorite} isFavorite={isFavorite} setSelectedSong={setSelectedSong} selectedSong={selectedSong}/>)
         } else if (button === 'settings') {
             return (<Settings setBackground={setBackground} background={background} setTextColor={setTextColor} textColor={textColor}/>)
         } 

@@ -3,7 +3,7 @@ const audioFiles = [
         "id": 1,
         "title": "Lofi Chill",
         "artist": "FASSounds",
-        "file": "./assets/audio/lofi-chill-140858.mp3",
+        "file": require("../assets/audio/lofi-chill-140858.mp3"),
         "image": require("../assets/audioImages/lofi-audio-pic1.jpg"),
         "isFavorite": false
     },
@@ -11,7 +11,7 @@ const audioFiles = [
         "id": 2,
         "title": "Lofi Girl Dreams",
         "artist": "chillmore",
-        "file": "./assets/audio/lofi-girl-dreams-113883.mp3",
+        "file": require("../assets/audio/lofi-girl-dreams-113883.mp3"),
         "image": require("../assets/audioImages/lofi-audio-pic2.jpg"),
         "isFavorite": false
     },
@@ -19,7 +19,7 @@ const audioFiles = [
         "id": 3,
         "title": "Lofi in the Bank",
         "artist": "BrentinDavis",
-        "file": "./assets/audio/lofi-in-the-bank-115135.mp3",
+        "file": require("../assets/audio/lofi-in-the-bank-115135.mp3"),
         "image": require("../assets/audioImages/lofi-audio-pic3.jpg"),
         "isFavorite": false
     },
@@ -27,7 +27,7 @@ const audioFiles = [
         "id": 4,
         "title": "Lofi Study",
         "artist": "FASSounds",
-        "file": "./assets/audio/lofi-study-112191.mp3",
+        "file": require("../assets/audio/lofi-study-112191.mp3"),
         "image": require("../assets/audioImages/lofi-audio-pic4.jpg"),
         "isFavorite": false
     },
@@ -35,7 +35,7 @@ const audioFiles = [
         "id": 5,
         "title": "Lost Ambient Lofi 60s",
         "artist": "Lesfm",
-        "file": "./assets/audio/lost-ambient-lofi-60s-10821.mp3",
+        "file": require("../assets/audio/lost-ambient-lofi-60s-10821.mp3"),
         "image": require("../assets/audioImages/lofi-audio-pic5.jpg"),
         "isFavorite": false
     },
@@ -43,7 +43,7 @@ const audioFiles = [
         "id": 6,
         "title": "Summer Sunset LoFi - slow mix",
         "artist": "xethrocc",
-        "file": "./assets/audio/summer-sunset-lofi-slow-mix-154447.mp3",
+        "file": require("../assets/audio/summer-sunset-lofi-slow-mix-154447.mp3"),
         "image": require("../assets/audioImages/lofi-audio-pic6.jpg"),
         "isFavorite": false
     },
@@ -51,7 +51,7 @@ const audioFiles = [
         "id": 7,
         "title": "Jazzy Hip Hop Boom Bap",
         "artist": "Music_Unlimited",
-        "file": "./assets/audio/jazzy-hip-hop-boom-bap-111861.mp3",
+        "file": require("../assets/audio/jazzy-hip-hop-boom-bap-111861.mp3"),
         "image": require("../assets/audioImages/lofi-audio-pic7.jpg"),
         "isFavorite": false
     },
@@ -59,7 +59,7 @@ const audioFiles = [
         "id": 8,
         "title": "Travel to the City",
         "artist": "Lesfm",
-        "file": "./assets/audio/travel-to-the-city-8752.mp3",
+        "file": require("../assets/audio/travel-to-the-city-8752.mp3"),
         "image": require("../assets/audioImages/lofi-audio-pic8.jpg"),
         "isFavorite": false
     },
@@ -67,7 +67,7 @@ const audioFiles = [
         "id": 9,
         "title": "Jazz Cafe",
         "artist": "FASSounds",
-        "file": "./assets/audio/jazz-cafe-112190.mp3",
+        "file": require("../assets/audio/jazz-cafe-112190.mp3"),
         "image": require("../assets/audioImages/lofi-audio-pic9.jpeg"),
         "isFavorite": false
     },
@@ -75,7 +75,7 @@ const audioFiles = [
         "id": 10,
         "title": "Sleep Cat",
         "artist": "Lofi_hour",
-        "file": "./assets/audio/sleepy-cat-118974.mp3",
+        "file": require("../assets/audio/sleepy-cat-118974.mp3"),
         "image": require("../assets/audioImages/lofi-audio-pic10.jpg"),
         "isFavorite": false
     },
@@ -83,7 +83,7 @@ const audioFiles = [
         "id": 11,
         "title": "Food Vlog (Kind)",
         "artist": "Coma-Media",
-        "file": "./assets/audio/food-vlog-kind-11204.mp3",
+        "file": require("../assets/audio/food-vlog-kind-11204.mp3"),
         "image": require("../assets/audioImages/lofi-audio-pic11.jpg"),
         "isFavorite": false
     },
@@ -91,7 +91,7 @@ const audioFiles = [
         "id": 12,
         "title": "Gentle Breeze Lofi",
         "artist": "LofCosmos",
-        "file": "./assets/audio/gentle-breeze-lofi-156771.mp3",
+        "file": require("../assets/audio/gentle-breeze-lofi-156771.mp3"),
         "image": require("../assets/audioImages/lofi-audio-pic16.jpg"),
         "isFavorite": false
     },
@@ -99,7 +99,7 @@ const audioFiles = [
         "id": 13,
         "title": "Jho Deep - Rain",
         "artist": "Meopa_Melson",
-        "file": "./assets/audio/jho-deep-rain-8599.mp3",
+        "file": require("../assets/audio/jho-deep-rain-8599.mp3"),
         "image": require("../assets/audioImages/lofi-audio-pic13.jpg"),
         "isFavorite": false
     },
@@ -107,7 +107,7 @@ const audioFiles = [
         "id": 14,
         "title": "Slomo",
         "artist": "SoulProdMusic",
-        "file": "./assets/audio/slomo-135807.mp3",
+        "file": require("../assets/audio/slomo-135807.mp3"),
         "image": require("../assets/audioImages/lofi-audio-pic14.jpg"),
         "isFavorite": false
     },
@@ -115,7 +115,7 @@ const audioFiles = [
         "id": 15,
         "title": "Rain Cafe Lo-fi",
         "artist": "Chill_Theater",
-        "file": "./assets/audio/rain-cafe-lo-fi-120915.mp3",
+        "file": require("../assets/audio/rain-cafe-lo-fi-120915.mp3"),
         "image": require("../assets/audioImages/lofi-audio-pic15.jpg"),
         "isFavorite": false
     },

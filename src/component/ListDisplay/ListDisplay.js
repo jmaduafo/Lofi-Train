@@ -21,7 +21,7 @@ const ListDisplay = (prop) => {
                         </div>
                         <div className='list-image'>
                             <img src={audio.image} alt={audio.title}/>
-                            <i className='bx bx-play' onClick={() => {prop.setSelectedSong(audioFiles[+audio.id - 1])}}></i>
+                            <i className='bx bx-play' onClick={() => {prop.setSelectedSong(audioFiles[+audio.id - 1]); prop.setPress(0)}}></i>
                         </div>
                     </div>
                     <div className='list-title-name'>
