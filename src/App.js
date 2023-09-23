@@ -1,21 +1,18 @@
 import './App.scss';
 import { useEffect, useState, useRef } from 'react';
-import lofiCover from './assets/images/lofi-settings.jpg'
 import Navbar from './component/Navbar/Navbar';
 import Loader from './component/Loader/Loader';
 import fullDate from './utils/getFullDate'
 import lofiImages from './imageData';
 import audioFiles from './utils/audioData';
-import song from './assets/audio/lofi-chill-140858.mp3'
 
 function App() {
   const [day, setDay] = useState()
-  const [location, setLocation] = useState()
+ 
   const [background, setBackground] = useState(lofiImages[0].image)
   const [textColor, setTextColor] = useState(lofiImages[0].textColor)
   const [isFavorite, setIsFavorite] = useState()
 
-  const [songs, setSongs] = useState(audioFiles)
   const [selectedSong, setSelectedSong] = useState(audioFiles[0])
 
   const [press, setPress] = useState(0)

@@ -1,13 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import '../ListDisplay/listDisplay.scss'
 import audioFiles from '../../utils/audioData'
 
 const ListDisplay = (prop) => {
-
-    function selectedSong(e) {
-        prop.setSelectedSong(audioFiles[+e.target.getAttribute('data-id') - 1])
-        console.log(audioFiles[2])
-    }
 
   return (
     <div className='list-section'>
